@@ -18,17 +18,20 @@ biro -> bior 是第二位和第三位的对调。
 
 ## 测试用例
 
-> ""     -> ""
 >
 >"a"    -> "a"
 >
 >"ab"   -> "ba"
 >
->"abc"  -> "abc","acb","bac",bca","cab","cba"
-"biro" -> "biro", "bior", "brio", "broi", "boir", "bori",
+>"abc"  -> "abc","acb","bac","bca","cab","cba"
+>
+> "biro" -> "biro", "bior", "brio", "broi", "boir", "bori",
           "ibro", "ibor", "irbo", "irob", "iobr", "iorb",
           "rbio", "rboi", "ribo", "riob", "roib", "robi",
           "obir", "obri", "oibr", "oirb", "orbi", "orib"
 
 ## kata 地址
 https://www.codeproject.com/Articles/498404/TDD-the-Anagrams-Kata
+
+## kata 视频
+https://www.bilibili.com/video/BV1oW411U7bu?p=2
