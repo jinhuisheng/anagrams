@@ -22,7 +22,4 @@ public class Anagrams {
         return result;
     }
 
-    private static String reverse(String word) {
-        return new StringBuilder(word).reverse().toString();
-    }
 }
