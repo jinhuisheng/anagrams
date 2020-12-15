@@ -34,12 +34,14 @@ public class Anagrams {
 
     private void add(int index) {
         char currentChar = word.charAt(index);
-        String deletedCharWord = new StringBuilder(word).deleteCharAt(index).toString();
-        List<String> deletedCharWordResult = of(deletedCharWord);
-        List<String> collect = deletedCharWordResult.stream()
+        List<String> collect = of(deleteChar(index)).stream()
                 .map(str -> currentChar + str)
                 .collect(Collectors.toList());
         result.addAll(collect);
+    }
+
+    private String deleteChar(int index) {
+        return new StringBuilder(word).deleteCharAt(index).toString();
     }
 
 }
