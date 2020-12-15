@@ -18,23 +18,23 @@ public class Anagrams {
     }
 
     public static List<String> of(String word) {
+        if (word.length() == 1) {
+            return Collections.singletonList(word);
+        }
         Anagrams anagrams = new Anagrams(word);
         return anagrams.of();
     }
 
     private List<String> of() {
-        if (word.length() == 1) {
-            return Collections.singletonList(word);
-        }
         for (int index = 0; index < word.length(); index++) {
             add(index);
         }
         return result;
     }
 
-    private void add(int i) {
-        char currentChar = word.charAt(i);
-        String deletedCharWord = new StringBuilder(word).deleteCharAt(i).toString();
+    private void add(int index) {
+        char currentChar = word.charAt(index);
+        String deletedCharWord = new StringBuilder(word).deleteCharAt(index).toString();
         List<String> deletedCharWordResult = of(deletedCharWord);
         List<String> collect = deletedCharWordResult.stream()
                 .map(str -> currentChar + str)
