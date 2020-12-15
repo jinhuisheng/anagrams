@@ -11,16 +11,9 @@ public class Anagrams {
         if (word.equals("abc")) {
             List<String> result = new ArrayList<>();
             for (int i = 0; i < word.length(); i++) {
-
                 char firstChar = word.charAt(i);
-                of(deleteChar(word, i)).stream().forEach(str -> {
-                    result.add(firstChar + str);
-                });
+                of(deleteChar(word, i)).forEach(str -> result.add(firstChar + str));
             }
-//            result.add(word.charAt(1) + "ac");
-//            result.add(word.charAt(1) + "ca");
-//            result.add(word.charAt(2) + "ab");
-//            result.add(word.charAt(2) + "ba");
             return result;
         }
         if (word.length() == 2) {
