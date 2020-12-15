@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,7 +11,7 @@ public class Anagrams {
     private String word;
     private List<String> result;
 
-    public Anagrams(String word) {
+    private Anagrams(String word) {
         this.result = new ArrayList<>();
         this.word = word;
     }
@@ -27,12 +26,12 @@ public class Anagrams {
 
     private List<String> of() {
         for (int index = 0; index < word.length(); index++) {
-            add(index);
+            addList(index);
         }
         return result;
     }
 
-    private void add(int index) {
+    private void addList(int index) {
         char currentChar = word.charAt(index);
         List<String> collect = of(deleteChar(index)).stream()
                 .map(str -> currentChar + str)
