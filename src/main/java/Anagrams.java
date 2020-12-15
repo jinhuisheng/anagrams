@@ -32,11 +32,14 @@ public class Anagrams {
     }
 
     private void addList(int index) {
-        char currentChar = word.charAt(index);
-        List<String> collect = of(deleteChar(index)).stream()
-                .map(str -> currentChar + str)
-                .collect(Collectors.toList());
+        List<String> collect = getCurrentCharFirstList(index);
         result.addAll(collect);
+    }
+
+    private List<String> getCurrentCharFirstList(int index) {
+        return of(deleteChar(index)).stream()
+                .map(str -> word.charAt(index) + str)
+                .collect(Collectors.toList());
     }
 
     private String deleteChar(int index) {
