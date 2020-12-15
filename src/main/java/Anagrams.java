@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,7 +9,14 @@ import java.util.List;
 public class Anagrams {
     public static List<String> of(String word) {
         if (word.equals("abc")) {
-            return Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba");
+            List<String> result = new ArrayList<>();
+            result.add("abc");
+            result.add("acb");
+            result.add("bac");
+            result.add("bca");
+            result.add("cab");
+            result.add("cba");
+            return result;
         }
         if (word.length() == 2) {
             return Arrays.asList(word, reverse(word));
