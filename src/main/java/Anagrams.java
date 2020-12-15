@@ -9,24 +9,20 @@ import java.util.stream.Collectors;
  */
 public class Anagrams {
     public static List<String> of(String word) {
-        if (word.equals("abc")) {
-            List<String> result = new ArrayList<>();
-            for (int i = 0; i < word.length(); i++) {
-                char currentChar = word.charAt(i);
-                String deletedCharWord = new StringBuilder(word).deleteCharAt(i).toString();
-                List<String> collect = of(deletedCharWord).stream().map(str -> currentChar + str).collect(Collectors.toList());
-                result.addAll(collect);
-            }
-//            result.add(word.charAt(1) + "ac");
-//            result.add(word.charAt(1) + "ca");
-//            result.add(word.charAt(2) + "ab");
-//            result.add(word.charAt(2) + "ba");
-            return result;
+        if (word.length() == 1) {
+            return Arrays.asList(word);
         }
         if (word.length() == 2) {
             return Arrays.asList(word, reverse(word));
         }
-        return Arrays.asList(word);
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < word.length(); i++) {
+            char currentChar = word.charAt(i);
+            String deletedCharWord = new StringBuilder(word).deleteCharAt(i).toString();
+            List<String> collect = of(deletedCharWord).stream().map(str -> currentChar + str).collect(Collectors.toList());
+            result.addAll(collect);
+        }
+        return result;
     }
 
     private static String reverse(String word) {
