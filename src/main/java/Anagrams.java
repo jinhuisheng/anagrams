@@ -8,8 +8,8 @@ import java.util.List;
  */
 public class Anagrams {
     public static List<String> of(String word) {
-        List<String> result = new ArrayList<>();
         if (word.equals("abc")) {
+            List<String> result = new ArrayList<>();
             result.add("abc");
             result.add("acb");
             result.add("bac");
