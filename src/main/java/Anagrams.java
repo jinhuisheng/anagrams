@@ -10,13 +10,15 @@ public class Anagrams {
     public static List<String> of(String word) {
         if (word.equals("abc")) {
             List<String> result = new ArrayList<>();
-            String deletedCharWord = new StringBuilder(word).deleteCharAt(0).toString();
-            result.add(word.charAt(0) + deletedCharWord);
-            result.add(word.charAt(0) + reverse(deletedCharWord));
-            result.add(word.charAt(1) + "ac");
-            result.add(word.charAt(1) + "ca");
-            result.add(word.charAt(2) + "ab");
-            result.add(word.charAt(2) + "ba");
+            for (int i = 0; i < word.length(); i++) {
+                String deletedCharWord = new StringBuilder(word).deleteCharAt(i).toString();
+                result.add(word.charAt(i) + deletedCharWord);
+                result.add(word.charAt(i) + reverse(deletedCharWord));
+            }
+//            result.add(word.charAt(1) + "ac");
+//            result.add(word.charAt(1) + "ca");
+//            result.add(word.charAt(2) + "ab");
+//            result.add(word.charAt(2) + "ba");
             return result;
         }
         if (word.length() == 2) {
