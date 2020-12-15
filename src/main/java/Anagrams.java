@@ -12,19 +12,25 @@ public class Anagrams {
             List<String> result = new ArrayList<>();
             for (int i = 0; i < word.length(); i++) {
 
+                char firstChar = word.charAt(i);
+                of(deleteChar(word, i)).stream().forEach(str -> {
+                    result.add(firstChar + str);
+                });
             }
-            result.add(word.charAt(0) + "bc");
-            result.add(word.charAt(0) + "cb");
-            result.add(word.charAt(1) + "ac");
-            result.add(word.charAt(1) + "ca");
-            result.add(word.charAt(2) + "ab");
-            result.add(word.charAt(2) + "ba");
+//            result.add(word.charAt(1) + "ac");
+//            result.add(word.charAt(1) + "ca");
+//            result.add(word.charAt(2) + "ab");
+//            result.add(word.charAt(2) + "ba");
             return result;
         }
         if (word.length() == 2) {
             return Arrays.asList(word, reverse(word));
         }
         return Arrays.asList(word);
+    }
+
+    private static String deleteChar(String word, Integer index) {
+        return new StringBuilder(word).deleteCharAt(index).toString();
     }
 
     private static String reverse(String word) {
