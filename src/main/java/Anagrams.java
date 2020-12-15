@@ -10,6 +10,9 @@ public class Anagrams {
     public static List<String> of(String word) {
         if (word.equals("abc")) {
             List<String> result = new ArrayList<>();
+            for (int i = 0; i < word.length(); i++) {
+
+            }
             result.add(word.charAt(0) + "bc");
             result.add(word.charAt(0) + "cb");
             result.add(word.charAt(1) + "ac");
