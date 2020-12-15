@@ -13,8 +13,8 @@ public class Anagrams {
         }
         List<String> result = new ArrayList<>();
         for (int i = 0; i < word.length(); i++) {
-            char firstChar = word.charAt(i);
-            of(deleteChar(word, i)).forEach(str -> result.add(firstChar + str));
+            char indexChar = word.charAt(i);
+            of(deleteChar(word, i)).forEach(str -> result.add(indexChar + str));
         }
         return result;
     }
