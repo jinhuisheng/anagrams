@@ -11,8 +11,15 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class AnagramsTest {
     @Test
-    void should_one_word_success() {
+    void should_one_char_success() {
         List<String> result = Anagrams.of("a");
         assertThat(result).isEqualTo(Arrays.asList("a"));
     }
+
+    @Test
+    void should_generate_two_char_success() {
+        List<String> result = Anagrams.of("ab");
+        assertThat(result).isEqualTo(Arrays.asList("ab", "ba"));
+    }
+
 }
