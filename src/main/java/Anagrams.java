@@ -12,9 +12,6 @@ public class Anagrams {
         if (word.length() == 1) {
             return Arrays.asList(word);
         }
-        if (word.length() == 2) {
-            return Arrays.asList(word, reverse(word));
-        }
         List<String> result = new ArrayList<>();
         for (int i = 0; i < word.length(); i++) {
             char currentChar = word.charAt(i);
