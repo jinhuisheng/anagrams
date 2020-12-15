@@ -8,18 +8,15 @@ import java.util.List;
  */
 public class Anagrams {
     public static List<String> of(String word) {
-        if (word.length() >= 2) {
-            List<String> result = new ArrayList<>();
-            for (int i = 0; i < word.length(); i++) {
-                char firstChar = word.charAt(i);
-                of(deleteChar(word, i)).forEach(str -> result.add(firstChar + str));
-            }
-            return result;
+        if (word.length() == 1) {
+            return Arrays.asList(word);
         }
-        if (word.length() == 2) {
-            return Arrays.asList(word, reverse(word));
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < word.length(); i++) {
+            char firstChar = word.charAt(i);
+            of(deleteChar(word, i)).forEach(str -> result.add(firstChar + str));
         }
-        return Arrays.asList(word);
+        return result;
     }
 
     private static String deleteChar(String word, Integer index) {
