@@ -19,4 +19,10 @@ public class AnagramsTest {
         assertThat(Anagrams.of("ab")).isEqualTo(Arrays.asList("ab", "ba"));
     }
 
+    @Test
+    void should_three_char_word_generate_success() {
+        assertThat(Anagrams.of("abc")).isEqualTo(Arrays.asList("abc", "acb","bac","bca","cab","cba"));
+    }
+
+
 }
