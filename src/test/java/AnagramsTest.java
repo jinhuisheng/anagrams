@@ -28,5 +28,11 @@ public class AnagramsTest {
         assertThat(result).isEqualTo(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba"));
     }
 
+    @Test
+    void should_generate_four_char_word_success() {
+        List<String> result = Anagrams.of("biro");
+        assertThat(result.size()).isEqualTo(24);
+    }
+
 
 }
