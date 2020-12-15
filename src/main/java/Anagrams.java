@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author huisheng.jin
@@ -11,9 +12,10 @@ public class Anagrams {
         if (word.equals("abc")) {
             List<String> result = new ArrayList<>();
             for (int i = 0; i < word.length(); i++) {
+                char currentChar = word.charAt(i);
                 String deletedCharWord = new StringBuilder(word).deleteCharAt(i).toString();
-                result.add(word.charAt(i) + deletedCharWord);
-                result.add(word.charAt(i) + reverse(deletedCharWord));
+                List<String> collect = of(deletedCharWord).stream().map(str -> currentChar + str).collect(Collectors.toList());
+                result.addAll(collect);
             }
 //            result.add(word.charAt(1) + "ac");
 //            result.add(word.charAt(1) + "ca");
