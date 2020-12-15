@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class Anagrams {
     public static List<String> of(String word) {
-        if (word.equals("ab")) {
+        if (word.length() == 2) {
             return Arrays.asList(word, reverse(word));
         }
         return Arrays.asList(word);
