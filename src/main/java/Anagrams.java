@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -9,12 +10,12 @@ import java.util.List;
 public class Anagrams {
     public static List<String> of(String word) {
         if (word.length() == 1) {
-            return Arrays.asList(word);
+            return Collections.singletonList(word);
         }
         List<String> result = new ArrayList<>();
-        for (int i = 0; i < word.length(); i++) {
-            char indexChar = word.charAt(i);
-            of(deleteChar(word, i)).forEach(str -> result.add(indexChar + str));
+        for (int index = 0; index < word.length(); index++) {
+            char indexChar = word.charAt(index);
+            of(deleteChar(word, index)).forEach(str -> result.add(indexChar + str));
         }
         return result;
     }
@@ -23,7 +24,4 @@ public class Anagrams {
         return new StringBuilder(word).deleteCharAt(index).toString();
     }
 
-    private static String reverse(String word) {
-        return new StringBuilder(word).reverse().toString();
-    }
 }
