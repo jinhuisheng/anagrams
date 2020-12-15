@@ -13,4 +13,10 @@ public class AnagramsTest {
     void should_one_char_word_generate_success() {
         assertThat(Anagrams.of("a")).isEqualTo(Arrays.asList("a"));
     }
+
+    @Test
+    void should_two_char_word_generate_success() {
+        assertThat(Anagrams.of("ab")).isEqualTo(Arrays.asList("ab", "ba"));
+    }
+
 }
