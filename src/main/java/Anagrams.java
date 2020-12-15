@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Anagrams {
     public static List<String> of(String word) {
-        if (word.equals("abc")) {
+        if (word.length() >= 2) {
             List<String> result = new ArrayList<>();
             for (int i = 0; i < word.length(); i++) {
                 char firstChar = word.charAt(i);
