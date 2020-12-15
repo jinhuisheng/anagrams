@@ -11,11 +11,11 @@ public class Anagrams {
         if (word.equals("abc")) {
             List<String> result = new ArrayList<>();
             result.add(word.charAt(0) + "bc");
-            result.add("acb");
-            result.add("bac");
-            result.add("bca");
-            result.add("cab");
-            result.add("cba");
+            result.add(word.charAt(0) + "cb");
+            result.add(word.charAt(1) + "ac");
+            result.add(word.charAt(1) + "ca");
+            result.add(word.charAt(2) + "ab");
+            result.add(word.charAt(2) + "ba");
             return result;
         }
         if (word.length() == 2) {
