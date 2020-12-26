@@ -10,8 +10,10 @@ public class Anagrams {
             for (String one : of("bc")) {
                 list.add(wordArray[0] + one);
             }
-            list.add(wordArray[1] + "ac");
-            list.add(wordArray[1] + "ca");
+            for (String one : of("ac")) {
+                list.add(wordArray[1] + one);
+            }
+
             list.add(wordArray[2] + "ab");
             list.add(wordArray[2] + "ba");
             return list;
