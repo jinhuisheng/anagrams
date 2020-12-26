@@ -16,6 +16,6 @@ public class Anagrams {
     }
 
     private static String reverse(String word) {
-        return "b" + "a";
+        return new StringBuilder(word).reverse().toString();
     }
 }
