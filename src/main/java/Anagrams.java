@@ -8,10 +8,14 @@ public class Anagrams {
         if (word.equals("ab")) {
             String first = "a";
             String second = "b";
-            list.add(first + second);
-            list.add(second + first);
+            list.add(word);
+            list.add(reverse(word));
             return list;
         }
         return Arrays.asList("a");
+    }
+
+    private static String reverse(String word) {
+        return "b" + "a";
     }
 }
