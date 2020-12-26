@@ -7,9 +7,9 @@ public class Anagrams {
         if (word.equals("abc")) {
             List<String> list = new ArrayList<>();
             String[] wordArray = word.split("");
-            for (int i = 0; i < 3; i++) {
-                for (String one : of(new StringBuilder(word).deleteCharAt(i).toString())) {
-                    list.add(wordArray[i] + one);
+            for (int index = 0; index < 3; index++) {
+                for (String one : of(delChar(word, index))) {
+                    list.add(wordArray[index] + one);
                 }
             }
             return list;
@@ -21,6 +21,10 @@ public class Anagrams {
             return list;
         }
         return Arrays.asList("a");
+    }
+
+    private static String delChar(String word, int index) {
+        return new StringBuilder(word).deleteCharAt(index).toString();
     }
 
     private static String reverse(String word) {
