@@ -13,7 +13,7 @@ public class Anagrams {
             for (String one : of(new StringBuilder(word).deleteCharAt(1).toString())) {
                 list.add(wordArray[1] + one);
             }
-            for (String one : of("ab")) {
+            for (String one : of(new StringBuilder(word).deleteCharAt(2).toString())) {
                 list.add(wordArray[2] + one);
             }
             return list;
