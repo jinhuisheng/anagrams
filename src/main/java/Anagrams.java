@@ -12,7 +12,7 @@ public class Anagrams {
         }
         List<String> list = new ArrayList<>();
         String[] wordArray = word.split("");
-        for (int index = 0; index < 3; index++) {
+        for (int index = 0; index < word.length(); index++) {
             for (String one : of(delChar(word, index))) {
                 list.add(wordArray[index] + one);
             }
