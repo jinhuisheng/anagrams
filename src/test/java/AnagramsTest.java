@@ -1,8 +1,12 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class AnagramsTest {
     @Test
     void generate_one() {
-//        assertThat(Anagrams.).isEqualTo();
+        assertThat(Anagrams.of("a")).isEqualTo(Arrays.asList("a"));
     }
 }
