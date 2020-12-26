@@ -6,8 +6,6 @@ public class Anagrams {
     public static List<String> of(String word) {
         List<String> list = new ArrayList<>();
         if (word.equals("ab")) {
-            String first = "a";
-            String second = "b";
             list.add(word);
             list.add(reverse(word));
             return list;
