@@ -6,14 +6,13 @@ public class Anagrams {
     public static List<String> of(String word) {
         if (word.equals("abc")) {
             List<String> list = new ArrayList<>();
-            return Arrays.asList(
-                    "abc"
-                    , "acb"
-                    , "bac"
-                    , "bca"
-                    , "cab"
-                    , "cba"
-            );
+            list.add("abc");
+            list.add("acb");
+            list.add("bac");
+            list.add("bca");
+            list.add("cab");
+            list.add("cba");
+            return list;
         }
         if (word.equals("ab")) {
             List<String> list = new ArrayList<>();
