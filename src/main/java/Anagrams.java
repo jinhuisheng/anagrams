@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Anagrams {
     public static List<String> of(String word) {
-        List<String> list = new ArrayList<>();
         if (word.equals("ab")) {
+            List<String> list = new ArrayList<>();
             list.add(word);
             list.add(reverse(word));
             return list;
