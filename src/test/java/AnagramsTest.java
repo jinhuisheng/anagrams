@@ -9,4 +9,10 @@ public class AnagramsTest {
     void generate_one() {
         assertThat(Anagrams.of("a")).isEqualTo(Arrays.asList("a"));
     }
+
+    @Test
+    void generate_two() {
+        assertThat(Anagrams.of("ab")).isEqualTo(Arrays.asList("ab", "ba"));
+    }
+
 }
