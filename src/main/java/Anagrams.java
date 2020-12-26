@@ -20,7 +20,7 @@ public class Anagrams {
             list.add(reverse(word));
             return list;
         }
-        return Arrays.asList("a");
+        return Arrays.asList(word);
     }
 
     private static String delChar(String word, int index) {
