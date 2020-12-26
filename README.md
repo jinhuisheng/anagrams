@@ -26,7 +26,7 @@ biro -> bior 是第二位和第三位的对调。
 
 "biro" -> "biro", "bior", "brio", "broi", "boir", "bori",
           "ibro", "ibor", "irbo", "irob", "iobr", "iorb",
-          "rbio", "rboi", "ribo", "riob", "roib", "robi",
+          "rbio", "rboi", "ribo", "riob", "robi", "roib",
           "obir", "obri", "oibr", "oirb", "orbi", "orib"
 
 
