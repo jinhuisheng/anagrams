@@ -7,15 +7,16 @@ public class Anagrams {
         if (word.equals("abc")) {
             List<String> list = new ArrayList<>();
             String[] wordArray = word.split("");
-            list.add(wordArray[0] + "bc");
-            list.add(wordArray[0] + "cb");
+            for (String one : of("bc")) {
+                list.add(wordArray[0] + one);
+            }
             list.add(wordArray[1] + "ac");
             list.add(wordArray[1] + "ca");
             list.add(wordArray[2] + "ab");
             list.add(wordArray[2] + "ba");
             return list;
         }
-        if (word.equals("ab")) {
+        if (word.length() == 2) {
             List<String> list = new ArrayList<>();
             list.add(word);
             list.add(reverse(word));
