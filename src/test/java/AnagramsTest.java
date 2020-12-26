@@ -15,4 +15,10 @@ public class AnagramsTest {
         assertThat(Anagrams.of("ab")).isEqualTo(Arrays.asList("ab", "ba"));
     }
 
+    @Test
+    void generate_three() {
+        assertThat(Anagrams.of("abc")).isEqualTo(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba"));
+    }
+
+
 }
