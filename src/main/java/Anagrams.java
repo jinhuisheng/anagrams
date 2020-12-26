@@ -7,14 +7,10 @@ public class Anagrams {
         if (word.equals("abc")) {
             List<String> list = new ArrayList<>();
             String[] wordArray = word.split("");
-            for (String one : of(new StringBuilder(word).deleteCharAt(0).toString())) {
-                list.add(wordArray[0] + one);
-            }
-            for (String one : of(new StringBuilder(word).deleteCharAt(1).toString())) {
-                list.add(wordArray[1] + one);
-            }
-            for (String one : of(new StringBuilder(word).deleteCharAt(2).toString())) {
-                list.add(wordArray[2] + one);
+            for (int i = 0; i < 3; i++) {
+                for (String one : of(new StringBuilder(word).deleteCharAt(i).toString())) {
+                    list.add(wordArray[i] + one);
+                }
             }
             return list;
         }
