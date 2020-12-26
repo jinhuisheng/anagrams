@@ -1,4 +1,4 @@
-# anagrams
+# anagrams 字谜游戏
 
 ## 问题描述
 Write a program to generate all potential
