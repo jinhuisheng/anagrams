@@ -13,9 +13,9 @@ public class Anagrams {
             for (String one : of("ac")) {
                 list.add(wordArray[1] + one);
             }
-
-            list.add(wordArray[2] + "ab");
-            list.add(wordArray[2] + "ba");
+            for (String one : of("ab")) {
+                list.add(wordArray[2] + one);
+            }
             return list;
         }
         if (word.length() == 2) {
