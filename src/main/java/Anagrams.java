@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.apache.commons.lang3.StringUtils.reverse;
 
 public class Anagrams {
     public static List<String> of(String word) {
