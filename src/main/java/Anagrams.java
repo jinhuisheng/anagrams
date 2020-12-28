@@ -16,9 +16,6 @@ public class Anagrams {
             }
             return list;
         }
-        if (word.length() == 2) {
-            return Arrays.asList(word, reverse(word));
-        }
         return Arrays.asList(word);
     }
 
