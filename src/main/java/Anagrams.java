@@ -9,19 +9,12 @@ public class Anagrams {
         if (word.length() == 3) {
             List<String> list = new ArrayList<>();
             for (int i = 0; i < 3; i++) {
-                list.add(word.charAt(i) + of(delChar(word, i)).get(0));
-                list.add(word.charAt(i) + of(delChar(word, i)).get(1));
+                List<String> anagramsOfTheLeft = of(delChar(word, i));
+                for (String s : anagramsOfTheLeft) {
+                    list.add(word.charAt(i) + s);
+                }
             }
             return list;
-//
-//            return Arrays.asList(
-//                    word.charAt(0) + of(delChar(word, 0)).get(0),
-//                    word.charAt(0) + of(delChar(word, 0)).get(1),
-//                    "bac",
-//                    "bca",
-//                    "cab",
-//                    "cba"
-//            );
         }
         if (word.length() == 2) {
             return Arrays.asList(word, reverse(word));
