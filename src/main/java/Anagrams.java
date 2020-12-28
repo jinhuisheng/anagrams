@@ -12,8 +12,8 @@ public class Anagrams {
             list.add(word.charAt(0) + "cb");
             list.add(word.charAt(1) + "ac");
             list.add(word.charAt(1) + "ca");
-            list.add("cab");
-            list.add("cba");
+            list.add(word.charAt(2) + "ab");
+            list.add(word.charAt(2) + "ba");
             return list;
         }
         if (word.length() == 2) {
