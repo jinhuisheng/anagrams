@@ -8,14 +8,10 @@ public class Anagrams {
     public static List<String> of(String word) {
         if (word.length() == 3) {
             List<String> list = new ArrayList<>();
-            for (String str : of(delChar(word, 0))) {
-                list.add(word.charAt(0) + str);
-            }
-            for (String str : of("ac")) {
-                list.add(word.charAt(1) + str);
-            }
-            for (String str : of("ab")) {
-                list.add(word.charAt(2) + str);
+            for (int i = 0; i < word.length(); i++) {
+                for (String str : of(delChar(word, i))) {
+                    list.add(word.charAt(i) + str);
+                }
             }
             return list;
         }
