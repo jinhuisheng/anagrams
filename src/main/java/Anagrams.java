@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 
 public class Anagrams {
     public static List<String> of(String word) {
         if (word.length() == 1) {
-            return Arrays.asList(word);
+            return Collections.singletonList(word);
         }
         List<String> list = new ArrayList<>();
         for (int i = 0; i < word.length(); i++) {
