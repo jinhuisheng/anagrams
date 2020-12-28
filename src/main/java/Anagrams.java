@@ -6,9 +6,6 @@ import static org.apache.commons.lang3.StringUtils.reverse;
 
 public class Anagrams {
     public static List<String> of(String word) {
-//        if (word.length() == 2) {
-//            return Arrays.asList(word, reverse(word));
-//        }
         if (word.length() == 1) {
             return Arrays.asList(word);
         }
