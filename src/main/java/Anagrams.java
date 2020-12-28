@@ -8,7 +8,7 @@ public class Anagrams {
     public static List<String> of(String word) {
         if (word.length() == 3) {
             List<String> list = new ArrayList<>();
-            for (String str : of("bc")) {
+            for (String str : of(delChar(word))) {
                 list.add(word.charAt(0) + str);
             }
             for (String str : of("ac")) {
@@ -23,5 +23,9 @@ public class Anagrams {
             return Arrays.asList(word, reverse(word));
         }
         return Arrays.asList(word);
+    }
+
+    private static String delChar(String word) {
+        return new StringBuilder(word).deleteCharAt(0).toString();
     }
 }
