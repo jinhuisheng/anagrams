@@ -8,7 +8,7 @@ public class Anagrams {
     public static List<String> of(String word) {
         if (word.length() == 3) {
             List<String> list = new ArrayList<>();
-            list.add("abc");
+            list.add(word.charAt(0) + "bc");
             list.add("acb");
             list.add("bac");
             list.add("bca");
