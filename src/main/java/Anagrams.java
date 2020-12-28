@@ -10,8 +10,8 @@ public class Anagrams {
             List<String> list = new ArrayList<>();
             list.add(word.charAt(0) + "bc");
             list.add(word.charAt(0) + "cb");
-            list.add("bac");
-            list.add("bca");
+            list.add(word.charAt(1) + "ac");
+            list.add(word.charAt(1) + "ca");
             list.add("cab");
             list.add("cba");
             return list;
