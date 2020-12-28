@@ -6,9 +6,9 @@ import static org.apache.commons.lang3.StringUtils.reverse;
 
 public class Anagrams {
     public static List<String> of(String word) {
-        if (word.length() == 3) {
+        if (word.length() >= 2) {
             List<String> list = new ArrayList<>();
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < word.length(); i++) {
                 List<String> anagramsOfTheLeft = of(delChar(word, i));
                 for (String s : anagramsOfTheLeft) {
                     list.add(word.charAt(i) + s);
