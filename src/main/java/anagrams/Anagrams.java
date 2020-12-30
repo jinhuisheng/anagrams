@@ -10,7 +10,7 @@ public class Anagrams {
         if (str.length() == 3) {
             return Arrays.asList(
                     str.charAt(0) + Anagrams.of(deleteCharAt(str, 0)).get(0),
-                    str.charAt(0) + Anagrams.of("bc").get(1),
+                    str.charAt(0) + Anagrams.of(deleteCharAt(str, 0)).get(1),
 
                     "bac",
                     "bca",
