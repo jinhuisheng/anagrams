@@ -11,13 +11,11 @@ public class Anagrams {
         if (str.length() == 3) {
             List<String> result = new ArrayList<>();
             for (int i = 0; i < str.length(); i++) {
-                result.add(str.charAt(i) + Anagrams.of(deleteCharAt(str, i)).get(0));
-                result.add(str.charAt(i) + Anagrams.of(deleteCharAt(str, i)).get(1));
+                List<String> anagramsOfTheLeft = Anagrams.of(deleteCharAt(str, i));
+                for (String s : anagramsOfTheLeft) {
+                    result.add(str.charAt(i) + s);
+                }
             }
-//            result.add(str.charAt(1) + Anagrams.of(deleteCharAt(str, 1)).get(0));
-//            result.add(str.charAt(1) + Anagrams.of(deleteCharAt(str, 1)).get(1));
-//            result.add(str.charAt(2) + Anagrams.of(deleteCharAt(str, 2)).get(0));
-//            result.add(str.charAt(2) + Anagrams.of(deleteCharAt(str, 2)).get(1));
             return result;
         }
         if (str.length() == 2) {
