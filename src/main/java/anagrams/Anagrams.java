@@ -13,12 +13,12 @@ public class Anagrams {
             for (String anagram : generate(deleteChar(str, 0))) {
                 result.add(str.charAt(0) + anagram);
             }
-
             for (String anagram : generate(deleteChar(str, 1))) {
                 result.add(str.charAt(1) + anagram);
             }
-            result.add(str.charAt(2) + generate(deleteChar(str, 2)).get(0));
-            result.add(str.charAt(2) + generate(deleteChar(str, 2)).get(1));
+            for (String anagram : generate(deleteChar(str, 2))) {
+                result.add(str.charAt(2) + anagram);
+            }
             return result;
         }
         if (str.length() == 2) {
