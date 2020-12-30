@@ -28,6 +28,7 @@ public class AnagramsTest {
         List<String> anagrams = Anagrams.generate("biro");
         assertThat(anagrams.size()).isEqualTo(24);
         assertThat(anagrams.get(0)).isEqualTo("biro");
+        assertThat(anagrams.get(23)).isEqualTo("orib");
     }
 
 
