@@ -9,8 +9,9 @@ public class Anagrams {
     public static List<String> of(String str) {
         if (str.length() == 3) {
             return Arrays.asList(
-                    "abc",
-                    "acb",
+                    str.charAt(0) + "bc",
+                    str.charAt(0) + "cb",
+
                     "bac",
                     "bca",
                     "cab",
