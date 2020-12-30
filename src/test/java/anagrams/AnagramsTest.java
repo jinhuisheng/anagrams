@@ -3,6 +3,7 @@ package anagrams;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,5 +22,12 @@ public class AnagramsTest {
     void should_generate_three_char_string() {
         assertThat(Anagrams.generate("abc")).isEqualTo(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba"));
     }
+
+    @Test
+    void should_generate_four_char_string() {
+        List<String> anagrams = Anagrams.generate("abcd");
+        assertThat(anagrams.size()).isEqualTo(24);
+    }
+
 
 }
