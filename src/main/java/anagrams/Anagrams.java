@@ -8,7 +8,7 @@ import static org.apache.commons.lang3.StringUtils.reverse;
 
 public class Anagrams {
     public static List<String> generate(String str) {
-        if (str.length() == 3) {
+        if (str.length() >= 2) {
             List<String> result = new ArrayList<>();
             for (int i = 0; i < str.length(); i++) {
                 for (String anagram : generate(deleteChar(str, i))) {
