@@ -10,12 +10,12 @@ public class Anagrams {
     public static List<String> generate(String str) {
         if (str.length() == 3) {
             List<String> result = new ArrayList<>();
-            result.add("a" + generate("bc").get(0));
-            result.add("a" + generate("bc").get(1));
-            result.add("b" + generate("ac").get(0));
-            result.add("b" + generate("ac").get(1));
-            result.add("c" + generate("ab").get(0));
-            result.add("c" + generate("ab").get(1));
+            result.add(str.charAt(0) + generate("bc").get(0));
+            result.add(str.charAt(0) + generate("bc").get(1));
+            result.add(str.charAt(1) + generate("ac").get(0));
+            result.add(str.charAt(1) + generate("ac").get(1));
+            result.add(str.charAt(2) + generate("ab").get(0));
+            result.add(str.charAt(2) + generate("ab").get(1));
             return result;
         }
         if (str.length() == 2) {
