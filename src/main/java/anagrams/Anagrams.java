@@ -7,7 +7,7 @@ import static org.apache.commons.lang3.StringUtils.reverse;
 
 public class Anagrams {
     public static List<String> generate(String str) {
-        if (str.equals("ab")) {
+        if (str.length() == 2) {
             return Arrays.asList(str, reverse(str));
         }
         return Arrays.asList(str);
