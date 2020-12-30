@@ -11,11 +11,11 @@ public class Anagrams {
         if (str.length() == 3) {
             List<String> result = new ArrayList<>();
             result.add(str.charAt(0) + generate(deleteChar(str, 0)).get(0));
-            result.add(str.charAt(0) + generate("bc").get(1));
-            result.add(str.charAt(1) + generate("ac").get(0));
-            result.add(str.charAt(1) + generate("ac").get(1));
-            result.add(str.charAt(2) + generate("ab").get(0));
-            result.add(str.charAt(2) + generate("ab").get(1));
+            result.add(str.charAt(0) + generate(deleteChar(str, 0)).get(1));
+            result.add(str.charAt(1) + generate(deleteChar(str, 1)).get(0));
+            result.add(str.charAt(1) + generate(deleteChar(str, 1)).get(1));
+            result.add(str.charAt(2) + generate(deleteChar(str, 2)).get(0));
+            result.add(str.charAt(2) + generate(deleteChar(str, 2)).get(1));
             return result;
         }
         if (str.length() == 2) {
