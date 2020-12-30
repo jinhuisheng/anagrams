@@ -6,16 +6,16 @@ import java.util.List;
 
 public class Anagrams {
     public static List<String> generate(String str) {
-        if (str.length() >= 2) {
-            List<String> result = new ArrayList<>();
-            for (int i = 0; i < str.length(); i++) {
-                for (String anagram : generate(deleteChar(str, i))) {
-                    result.add(str.charAt(i) + anagram);
-                }
-            }
-            return result;
+        if (str.length() == 1) {
+            return Arrays.asList(str);
         }
-        return Arrays.asList(str);
+        List<String> result = new ArrayList<>();
+        for (int index = 0; index < str.length(); index++) {
+            for (String anagram : generate(deleteChar(str, index))) {
+                result.add(str.charAt(index) + anagram);
+            }
+        }
+        return result;
     }
 
     private static String deleteChar(String str, int index) {
