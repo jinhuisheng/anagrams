@@ -10,7 +10,7 @@ public class Anagrams {
         if (str.length() == 3) {
             return Arrays.asList(
                     str.charAt(0) + "bc",
-                    str.charAt(0) + "cb",
+                    str.charAt(0) + reverse("bc"),
 
                     "bac",
                     "bca",
