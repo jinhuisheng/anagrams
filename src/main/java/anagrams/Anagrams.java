@@ -1,13 +1,13 @@
 package anagrams;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Anagrams {
     public static List<String> generate(String str) {
         if (str.length() == 1) {
-            return Arrays.asList(str);
+            return Collections.singletonList(str);
         }
         List<String> result = new ArrayList<>();
         for (int index = 0; index < str.length(); index++) {
