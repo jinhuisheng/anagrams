@@ -8,7 +8,7 @@ import static org.apache.commons.lang3.StringUtils.reverse;
 public class Anagrams {
     public static List<String> of(String str) {
         if (str.length() == 2) {
-            return Arrays.asList("ab", reverse("ab"));
+            return Arrays.asList(str, reverse(str));
         }
         return Arrays.asList("a");
     }
