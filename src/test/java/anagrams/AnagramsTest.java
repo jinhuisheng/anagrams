@@ -25,8 +25,9 @@ public class AnagramsTest {
 
     @Test
     void should_generate_four_char_string() {
-        List<String> anagrams = Anagrams.generate("abcd");
+        List<String> anagrams = Anagrams.generate("biro");
         assertThat(anagrams.size()).isEqualTo(24);
+        assertThat(anagrams.get(0)).isEqualTo("biro");
     }
 
 
