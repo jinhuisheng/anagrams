@@ -12,8 +12,8 @@ public class Anagrams {
             List<String> result = new ArrayList<>();
             for (int i = 0; i < str.length(); i++) {
                 List<String> anagramsOfTheLeft = Anagrams.of(deleteCharAt(str, i));
-                for (String s : anagramsOfTheLeft) {
-                    result.add(str.charAt(i) + s);
+                for (String anagramOfTheLeft : anagramsOfTheLeft) {
+                    result.add(str.charAt(i) + anagramOfTheLeft);
                 }
             }
             return result;
