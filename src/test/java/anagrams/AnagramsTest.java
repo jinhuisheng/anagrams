@@ -20,6 +20,11 @@ public class AnagramsTest {
 
     @Test
     void should_generate_three_char_string() {
+        assertThat(Anagrams.of("abc")).isEqualTo(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba"));
+    }
+
+    @Test
+    void should_generate_four_char_string() {
         List<String> result = Anagrams.of("abcd");
         assertThat(result.size()).isEqualTo(24);
         assertThat(result.get(0)).isEqualTo("abcd");
