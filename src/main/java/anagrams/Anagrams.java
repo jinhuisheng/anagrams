@@ -10,7 +10,7 @@ public class Anagrams {
     public static List<String> generate(String str) {
         if (str.length() == 3) {
             List<String> result = new ArrayList<>();
-            result.add(str.charAt(0) + generate("bc").get(0));
+            result.add(str.charAt(0) + generate(deleteChar(str, 0)).get(0));
             result.add(str.charAt(0) + generate("bc").get(1));
             result.add(str.charAt(1) + generate("ac").get(0));
             result.add(str.charAt(1) + generate("ac").get(1));
@@ -22,5 +22,9 @@ public class Anagrams {
             return Arrays.asList(str, reverse(str));
         }
         return Arrays.asList(str);
+    }
+
+    private static String deleteChar(String str, int index) {
+        return new StringBuilder(str).deleteCharAt(index).toString();
     }
 }
