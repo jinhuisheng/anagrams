@@ -14,8 +14,8 @@ public class Anagrams {
             result.add("a" + generate("bc").get(1));
             result.add("b" + generate("ac").get(0));
             result.add("b" + generate("ac").get(1));
-            result.add("c" + "ab");
-            result.add("c" + "ba");
+            result.add("c" + generate("ab").get(0));
+            result.add("c" + generate("ab").get(1));
             return result;
         }
         if (str.length() == 2) {
