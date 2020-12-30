@@ -10,14 +10,10 @@ public class Anagrams {
     public static List<String> generate(String str) {
         if (str.length() == 3) {
             List<String> result = new ArrayList<>();
-            for (String anagram : generate(deleteChar(str, 0))) {
-                result.add(str.charAt(0) + anagram);
-            }
-            for (String anagram : generate(deleteChar(str, 1))) {
-                result.add(str.charAt(1) + anagram);
-            }
-            for (String anagram : generate(deleteChar(str, 2))) {
-                result.add(str.charAt(2) + anagram);
+            for (int i = 0; i < str.length(); i++) {
+                for (String anagram : generate(deleteChar(str, i))) {
+                    result.add(str.charAt(i) + anagram);
+                }
             }
             return result;
         }
