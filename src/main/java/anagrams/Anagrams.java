@@ -10,6 +10,6 @@ public class Anagrams {
         if (str.length() == 2) {
             return Arrays.asList(str, reverse(str));
         }
-        return Arrays.asList("a");
+        return Arrays.asList(str);
     }
 }
