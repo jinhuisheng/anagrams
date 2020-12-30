@@ -10,8 +10,11 @@ public class Anagrams {
     public static List<String> generate(String str) {
         if (str.length() == 3) {
             List<String> result = new ArrayList<>();
-            result.add(str.charAt(0) + generate(deleteChar(str, 0)).get(0));
-            result.add(str.charAt(0) + generate(deleteChar(str, 0)).get(1));
+            List<String> anagramsOfMinusOneChar = generate(deleteChar(str, 0));
+            for (String anagram : anagramsOfMinusOneChar) {
+                result.add(str.charAt(0) + anagram);
+            }
+
             result.add(str.charAt(1) + generate(deleteChar(str, 1)).get(0));
             result.add(str.charAt(1) + generate(deleteChar(str, 1)).get(1));
             result.add(str.charAt(2) + generate(deleteChar(str, 2)).get(0));
