@@ -8,12 +8,12 @@ import static org.apache.commons.lang3.StringUtils.reverse;
 
 public class Anagrams {
     public static List<String> of(String str) {
-        if (str.length() == 3) {
+        if (str.length() >= 2) {
             List<String> result = new ArrayList<>();
-            for (int i = 0; i < str.length(); i++) {
-                List<String> anagramsOfTheLeft = Anagrams.of(deleteCharAt(str, i));
+            for (int index = 0; index < str.length(); index++) {
+                List<String> anagramsOfTheLeft = Anagrams.of(deleteCharAt(str, index));
                 for (String anagramOfTheLeft : anagramsOfTheLeft) {
-                    result.add(str.charAt(i) + anagramOfTheLeft);
+                    result.add(str.charAt(index) + anagramOfTheLeft);
                 }
             }
             return result;
