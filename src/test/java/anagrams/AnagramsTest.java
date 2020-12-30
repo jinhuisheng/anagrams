@@ -22,6 +22,8 @@ public class AnagramsTest {
     void should_generate_three_char_string() {
         List<String> result = Anagrams.of("abcd");
         assertThat(result.size()).isEqualTo(24);
+        assertThat(result.get(0)).isEqualTo("abcd");
+        assertThat(result.get(23)).isEqualTo("dcba");
     }
 
 
